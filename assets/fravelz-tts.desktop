@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Fravelz TTS
+Comment=Texto a voz (edge-tts + Piper)
+Exec=@EXEC@
+Path=@ROOT@
+Icon=audio-x-generic
+Terminal=false
+Categories=AudioVideo;Audio;Utility;
+StartupNotify=true
