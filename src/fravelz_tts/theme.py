@@ -25,13 +25,44 @@ FONT_FALLBACK = "JetBrains Mono"
 FONT_UI = "Noto Sans"
 
 
+def apply_appearance(app) -> None:
+    """Fusion + palette so QSS text colors win over the desktop theme."""
+    from PySide6.QtGui import QColor, QPalette
+
+    app.setStyle("Fusion")
+    pal = QPalette()
+    pal.setColor(QPalette.ColorRole.Window, QColor(BG))
+    pal.setColor(QPalette.ColorRole.WindowText, QColor(FG))
+    pal.setColor(QPalette.ColorRole.Base, QColor(BG_PANEL))
+    pal.setColor(QPalette.ColorRole.AlternateBase, QColor(BG_CARD))
+    pal.setColor(QPalette.ColorRole.Text, QColor(FG))
+    pal.setColor(QPalette.ColorRole.Button, QColor(BG_CARD))
+    pal.setColor(QPalette.ColorRole.ButtonText, QColor(FG))
+    pal.setColor(QPalette.ColorRole.BrightText, QColor(ACCENT_BRIGHT))
+    pal.setColor(QPalette.ColorRole.Highlight, QColor(ACCENT))
+    pal.setColor(QPalette.ColorRole.HighlightedText, QColor(ON_PRIMARY))
+    pal.setColor(QPalette.ColorRole.PlaceholderText, QColor(FG_MUTED))
+    pal.setColor(QPalette.ColorRole.ToolTipBase, QColor(BG_CARD))
+    pal.setColor(QPalette.ColorRole.ToolTipText, QColor(FG))
+    pal.setColor(QPalette.ColorRole.Link, QColor(ACCENT))
+    app.setPalette(pal)
+    app.setStyleSheet(stylesheet())
+
+
 def stylesheet() -> str:
     return f"""
-    QWidget#root {{
-        background-color: {BG};
+    QWidget {{
         color: {FG};
         font-family: "{FONT_UI}", sans-serif;
         font-size: 13px;
+    }}
+    QWidget#root {{
+        background-color: {BG};
+        color: {FG};
+    }}
+    QLabel {{
+        color: {FG};
+        background-color: transparent;
     }}
     QLabel#title {{
         color: {ACCENT};

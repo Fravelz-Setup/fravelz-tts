@@ -32,7 +32,7 @@ from fravelz_tts.engines import edge as edge_engine
 from fravelz_tts.engines import piper as piper_engine
 from fravelz_tts.paths import default_output_dir
 from fravelz_tts.player import AudioPlayer
-from fravelz_tts.theme import WINDOW_HEIGHT, WINDOW_WIDTH, stylesheet
+from fravelz_tts.theme import WINDOW_HEIGHT, WINDOW_WIDTH, apply_appearance
 from fravelz_tts.voices import EngineKind, Voice, voices_for
 
 
@@ -83,7 +83,6 @@ class MainWindow(QWidget):
         self.setObjectName("root")
         self.setWindowTitle("fravelz-tts")
         self.resize(WINDOW_WIDTH, WINDOW_HEIGHT)
-        self.setStyleSheet(stylesheet())
 
         self._last_file: Path | None = None
         self._worker: SynthWorker | None = None
@@ -285,6 +284,7 @@ def run() -> int:
     app = QApplication.instance() or QApplication([])
     font = QFont("Noto Sans", 13)
     app.setFont(font)
+    apply_appearance(app)
     win = MainWindow()
     win.show()
     return app.exec()
