@@ -1,33 +1,61 @@
-# fravelz-tts
+<h1 align="center">fravelz-tts</h1>
 
+<p align="center">
+  <img src="assets/readme-hero.jpg" alt="Banner navy y cian de la app de voz" width="100%">
+</p>
 
-Aplicación de escritorio para pasar texto a voz. En línea usa voces de edge-tts. Sin red usa Piper. La interfaz sigue la paleta del asistente Jarvis.
+<p align="center">Texto a voz en el escritorio. Hace ese trabajo y no es una pieza pública.</p>
 
-| | |
-| --- | --- |
-| Autor | [Fravelz](https://github.com/FraVelz) |
-| Licencia | No hay archivo de licencia en el repositorio. |
+App PySide6. Voces en línea con edge-tts y voces locales con Piper. La interfaz usa navy y cian `#00d4ff`. La salida cae en `~/Videos/recursos/tts/`.
 
-## Tecnologías
+<p align="center">
+  <a href="https://skillicons.dev">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py,linux&theme=dark&perline=6">
+      <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=py,linux&theme=light&perline=6">
+      <img alt="Python, Linux" src="https://skillicons.dev/icons?i=py,linux&perline=6">
+    </picture>
+  </a>
+</p>
 
-- Python 3.11+
-- PySide6
-- edge-tts
-- Piper (motor offline, fuera del paquete Python)
+## ✨ Características
 
-## Estructura base
+- Texto a voz en el escritorio, en línea y sin red.
+- Instalador en `scripts/install.sh`.
+- Pieza de uso propio, no un producto para enseñar.
 
-Esqueleto del repositorio. El contenido interno cambia; estas piezas se mantienen.
+> [!NOTE]
+> Hace el trabajo de leer un guion en voz alta. No es una pieza de portafolio.
 
-```text
-src/fravelz_tts/    aplicación
-scripts/            instalación local
-assets/             recursos de interfaz
-```
+## 🛠️ Tecnologías
 
-## Puesta en marcha
+- **Python y PySide6** — la ventana.
+- **edge-tts** — voces neurales, sin API key.
+- **Piper** — dos voces en español, en local.
+
+## 🚀 Inicio rápido
 
 ```bash
 bash scripts/install.sh
 fravelz-tts
 ```
+
+> [!IMPORTANT]
+> Hace falta Python 3.11 o superior. La primera vez, Piper descarga voces y pide red.
+
+## 📖 Uso
+
+Pega el guion, elige en línea o local, y genera. El archivo queda en `~/Videos/recursos/tts/`.
+
+También arranca con `.venv/bin/python -m fravelz_tts` desde la carpeta del repo.
+
+> [!TIP]
+> `bash scripts/install-voices.sh` baja solo las voces Piper si el entorno ya existe.
+
+## 🤝 Contribuir
+
+Repositorio de [FraVelz](https://github.com/FraVelz). El remoto está en Fravelz-Setup.
+
+## 📄 Licencia
+
+Este repositorio no incluye un archivo de licencia. El uso previsto es personal.
