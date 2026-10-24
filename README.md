@@ -18,7 +18,7 @@ App PySide6. Voces en línea con edge-tts y voces locales con Piper. La interfaz
   </a>
 </p>
 
-## ✨ Características
+## Características
 
 - Texto a voz en el escritorio, en línea y sin red.
 - Instalador en `scripts/install.sh`.
@@ -27,13 +27,13 @@ App PySide6. Voces en línea con edge-tts y voces locales con Piper. La interfaz
 > [!NOTE]
 > Hace el trabajo de leer un guion en voz alta. No es una pieza de portafolio.
 
-## 🛠️ Tecnologías
+## Tecnologías
 
 - **Python y PySide6** — la ventana.
 - **edge-tts** — voces neurales, sin API key.
 - **Piper** — dos voces en español, en local.
 
-## 🚀 Inicio rápido
+## Inicio rápido
 
 ```bash
 bash scripts/install.sh
@@ -43,7 +43,7 @@ fravelz-tts
 > [!IMPORTANT]
 > Hace falta Python 3.11 o superior. La primera vez, Piper descarga voces y pide red.
 
-## 📖 Uso
+## Uso
 
 Pega el guion, elige en línea o local, y genera. El archivo queda en `~/Videos/recursos/tts/`.
 
@@ -52,10 +52,10 @@ También arranca con `.venv/bin/python -m fravelz_tts` desde la carpeta del repo
 > [!TIP]
 > `bash scripts/install-voices.sh` baja solo las voces Piper si el entorno ya existe.
 
-## 🤝 Contribuir
+## Contribuir
 
 Repositorio de [FraVelz](https://github.com/FraVelz). El remoto está en Fravelz-Setup.
 
-## 📄 Licencia
+## Licencia
 
 Este repositorio no incluye un archivo de licencia. El uso previsto es personal.
