@@ -4,7 +4,7 @@
   <img src="assets/readme-hero.jpg" alt="Banner navy y cian de la app de voz" width="100%">
 </p>
 
-<p align="center">Texto a voz en el escritorio. Hace ese trabajo y no es una pieza pública.</p>
+<p align="center">Texto a voz en el escritorio: edge-tts en línea y Piper sin red.</p>
 
 App PySide6. Voces en línea con edge-tts y voces locales con Piper. La interfaz usa navy y cian `#00d4ff`. La salida cae en `~/Videos/recursos/tts/`.
 
